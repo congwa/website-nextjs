@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
+import { Suspense } from "react";
 import Contact from "./components/Contact"
 import Header from "./components/Header"
 import Home from "./components/Home"
@@ -25,7 +26,9 @@ const Index = () => {
           <About />
           <Recipe />
           <Contact />
-          <Footer />
+          <Suspense>
+            <Footer />
+          </Suspense>
         </div>
     </>
   );

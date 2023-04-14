@@ -1,0 +1,13 @@
+{
+  "configurations": [
+  {
+    "name": "Launch Program",
+    "program": "${workspaceFolder}/node_modules/next/dist/bin/next",
+    "request": "launch",
+    "skipFiles": [
+      "<node_internals>/**"
+    ],
+    "type": "node"
+  }
+  ]
+}

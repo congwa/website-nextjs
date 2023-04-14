@@ -5,9 +5,22 @@ import { explores } from "../Data";
 import { footerContacts } from "../Data";
 import { payements } from "../Data";
 import Image from "next/image";
+import { companiesReq, menuListReq } from '@/services'
 
+const Footer = async () => {
 
-const Footer = () => {
+  // const menu = await ;
+
+  // console.log(menu, 'menu');
+
+  const [menu, companies] = await Promise.all(
+    [
+      await menuListReq(),
+      await companiesReq(),
+    ]
+  )
+  console.log(companies, 'companies', menu);
+
   return (
     <div className="section">
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-10 mb-8">
