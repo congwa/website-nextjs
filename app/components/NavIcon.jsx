@@ -1,5 +1,6 @@
+"use client"
 import React from "react";
-import { mainMenu } from "../Data";
+import { mainMenu } from "../../app/Data";
 import { RxDashboard } from "react-icons/rx";
 import { useState } from "react";
 const NavIcon = () => {

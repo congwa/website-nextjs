@@ -1,13 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
-import Contact from "@/components/Contact";
-import Header from "@/components/Header";
-import Home from "@/components/Home";
-import About from "@/components/About";
-import NavIcon from "@/components/NavIcon";
-import Recipe from "@/components/Recipe";
-import Footer from "@/components/Footer";
+import Contact from "./components/Contact"
+import Header from "./components/Header"
+import Home from "./components/Home"
+import About from "./components/About"
+import NavIcon from "./components/NavIcon"
+import Recipe from "./components/Recipe"
+import Footer from "./components/Footer"
 
 const Index = () => {
   return (
@@ -32,3 +32,5 @@ const Index = () => {
 };
 
 export default Index;
+
+

@@ -22,3 +22,18 @@
     @apply rounded-t-[1rem] rounded-bl-[1rem] bg-black p-4 flex items-center gap-4 text-white text-[0.85rem]
   }
 }
+
+
+.glass-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  /* border-radius: 10px; */
+  backdrop-filter: blur(5px);
+  background-color: rgba(0,191,255, 0.106);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  /* border: 2px rgba(255,255,255,0.4) solid; */
+  border-bottom: 2px rgba(40,40,40,0.35) solid;
+  /* border-right: 2px rgba(40,40,40,0.35) solid; */
+}

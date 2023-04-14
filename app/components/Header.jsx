@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -14,7 +15,7 @@ const Header = () => {
     <div
       className={`${
         scroll ? " bg-back shadow-sm" : ""
-      } fixed top-0 left-0 w-full z-20`}
+      } fixed top-0 left-0 w-full z-20 glass-container`}
     >
       <nav className="relative container mx-auto flex items-center justify-between py-4 px-2">
         <div className="">
