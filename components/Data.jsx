@@ -7,17 +7,17 @@ import { HiOutlinePhone, HiOutlineMail } from "react-icons/hi";
 import { AiFillHome } from "react-icons/ai";
 import { MdExplore, MdContactPage } from "react-icons/md";
 
-import recipe1 from "@/assets/recipe1.jpg";
-import recipe2 from "@/assets/recipe2.jpg";
-import recipe3 from "@/assets/recipe3.jpg";
-import recipe4 from "@/assets/recipe4.jpg";
-import recipe5 from "@/assets/recipe5.jpg";
-import recipe6 from "@/assets/recipe6.jpg";
+import recipe1 from "./assets/recipe1.jpg";
+import recipe2 from "./assets/recipe2.jpg";
+import recipe3 from "./assets/recipe3.jpg";
+import recipe4 from "./assets/recipe4.jpg";
+import recipe5 from "./assets/recipe5.jpg";
+import recipe6 from "./assets/recipe6.jpg";
 
-import payment1 from "@/assets/payment1.png";
-import payment2 from "@/assets/payment2.png";
-import payment3 from "@/assets/payment3.png";
-import payment4 from "@/assets/payment4.png";
+import payment1 from "./assets/payment1.png";
+import payment2 from "./assets/payment2.png";
+import payment3 from "./assets/payment3.png";
+import payment4 from "./assets/payment4.png";
 
 export const heroIcons = [
   <CiBurger />,

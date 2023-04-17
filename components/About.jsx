@@ -1,7 +1,7 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
-import pasta from "@/assets/pasta.png";
-import chef from "@/assets/chef.jpg";
+import pasta from "./assets/pasta.png";
+import chef from "./assets/chef.jpg";
 import Image from "next/image";
 
 
@@ -28,7 +28,7 @@ const About = () => {
           </div>
         </div>
         <div className="md:row-start-1">
-          <Image src={pasta} alt="" />
+          <img object-fit="true" src={pasta} alt="" />
         </div>
       </div>
       <div className="grid md:grid-cols-2 gap-10 items-center">
@@ -45,7 +45,7 @@ const About = () => {
           </p>
         </div>
         <div className="">
-          <Image src={chef} alt="" />
+          <img object-fit="true" src={chef} alt="" />
         </div>
       </div>
     </div>

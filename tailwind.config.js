@@ -2,10 +2,13 @@
 
 const colors = require('tailwindcss/colors')
 module.exports = {
-  content: ['./app/**/*.{js,ts,jsx,tsx}'],
+  content: [  
+  './app/**/*.{js,ts,jsx,tsx}',
+  './components/**/*.{js,ts,jsx,tsx}'
+],
   darkMode: 'media', // or 'media' or 'class'
   important: true,
-  mode: "jit",
+  // mode: "jit",
   theme: {
     fontFamily: {
       poppins: "Poppins",

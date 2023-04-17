@@ -1,26 +1,81 @@
 import React from "react";
-import { footerSocials } from "../Data";
-import { mainMenu } from "../Data";
-import { explores } from "../Data";
-import { footerContacts } from "../Data";
-import { payements } from "../Data";
+import { footerSocials } from "./Data";
+import { payements } from "./Data";
 import Image from "next/image";
-import { companiesReq, menuListReq } from '@/services'
+import { companiesReq, menuListReq, newsListReq } from '@/services/index'
+
+
+import { BiMap } from "react-icons/bi";
+import { CiBurger } from "react-icons/ci";
+import { GiBowlOfRice, GiCakeSlice } from "react-icons/gi";
+import { FaIceCream } from "react-icons/fa";
+import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
+import { HiOutlinePhone, HiOutlineMail } from "react-icons/hi";
+import { AiFillHome } from "react-icons/ai";
+import { MdExplore, MdContactPage } from "react-icons/md";
+import { url } from "inspector";
+
+
+
 
 const Footer = async () => {
 
-  // const menu = await ;
 
-  // console.log(menu, 'menu');
 
-  const [menu, companies] = await Promise.all(
+  const [menu, companies, news] = await Promise.all(
     [
       await menuListReq(),
       await companiesReq(),
+      await newsListReq()
     ]
   )
-  console.log(companies, 'companies', menu);
-
+  const footerContacts = [
+    {
+      id: 1,
+      icon: <HiOutlinePhone />,
+      text: companies.phone,
+    },
+    {
+      id: 2,
+      icon: <HiOutlineMail />,
+      text: companies.email,
+    },
+    {
+      id: 3,
+      icon: <BiMap />,
+      text: companies.address,
+    },
+  ];
+  const mainMenu = [
+    ...menu.map(menu=>{
+      return {
+        ...menu,
+        href: url,
+        text: menu.name,
+        icon: <AiFillHome />,
+      }
+    }),
+    {
+      id: 22222,
+      href: "about",
+      text: "About",
+      icon: <MdExplore />,
+    },
+    {
+      id: 33333,
+      href: "recipe",
+      text: "Recipe",
+      icon: <GiBowlOfRice />,
+    },
+    {
+      id: 44444,
+      href: "contact",
+      text: "Contact",
+      icon: <MdContactPage />,
+    },
+  ];
+  const explores = news?.list?.map(object => object.title).slice(0, Math.min(5, news?.list?.length - 1)) || [];
+  
   return (
     <div className="section">
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-10 mb-8">
@@ -45,10 +100,11 @@ const Footer = async () => {
         </div>
         <div className="grid grid-cols-2">
           <div>
-            <h3 className="font-semibold text-[1.1rem] mb-4">Main Menu</h3>
-            {mainMenu.map((menu) => {
+            <h3 className="font-semibold text-[1.1rem] mb-4">目录</h3>
+            {mainMenu.filter(menu => menu.text).map((menu) => {
               return (
-                <div className="text-[1rem] mb-2" key={menu.id}>
+                <div className="flex items-center text-[1rem] gap-4 mb-2" key={menu.id}>
+                  <span className="text-xl">{menu.icon}</span>
                   <a href={`#${menu.href}`}>{menu.text}</a>
                 </div>
               );
@@ -66,7 +122,7 @@ const Footer = async () => {
           </div>
         </div>
         <div className="">
-          <h3 className="font-semibold text-[1.1rem] mb-4">Contact</h3>
+          <h3 className="font-semibold text-[1.1rem] mb-4">联系我们</h3>
           {footerContacts.map((footerContact) => {
             return (
               <div
@@ -82,14 +138,13 @@ const Footer = async () => {
       </div>
       <div className="flex flex-wrap justify-between gap-4 pb-8">
         <div className="">
-          Copyright &#169; <span className="font-bold">Ye Lin Ko</span>.All
-          rights deserved.
+          <span className="font-bold">京ICP备14027257号-1 </span>
         </div>
         <div className="flex gap-2">
           {payements.map((payment, index) => {
             return (
               <div className="" key={index}>
-                <Image src={payment} alt="" className="w-10" />
+                <img object-fit="true" src={payment} alt="" className="w-10" />
               </div>
             );
           })}
