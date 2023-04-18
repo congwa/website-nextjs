@@ -19,7 +19,7 @@
     @apply container mx-auto pt-[8rem] lg:px-8 px-4
   }
   .btn {
-    @apply rounded-t-[1rem] rounded-bl-[1rem] bg-black p-4 flex items-center gap-4 text-white text-[0.85rem]
+    @apply rounded-t-[1rem] rounded-bl-[1rem] bg-primary p-4 flex items-center gap-4 text-white text-[0.85rem]
   }
 }
 
@@ -36,4 +36,15 @@
   /* border: 2px rgba(255,255,255,0.4) solid; */
   border-bottom: 2px rgba(40,40,40,0.35) solid;
   /* border-right: 2px rgba(40,40,40,0.35) solid; */
+}
+
+
+.swiper .tiga-dots-wrap{
+  background-color: transparent;
+  left: 70%;
+  bottom: 10px;
+}
+
+.swiper .tiga-dots-active {
+  background: #e63d00;
 }

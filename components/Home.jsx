@@ -1,8 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import hero from "./assets/hero.png";
 import { FaArrowRight } from "react-icons/fa";
 import { heroIcons } from "./Data";
-import Image from "next/image";
 
 
 const Home = () => {

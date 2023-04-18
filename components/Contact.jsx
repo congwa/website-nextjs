@@ -8,7 +8,7 @@ const Contact = () => {
           <div className="uppercase">let's talk</div>
           <div className="text-3xl font-bold">Want to Reserve a table?</div>
         </div>
-        <div className="rounded-tr-[1rem] rounded-b-[1rem] bg-black text-white p-4 text-[0.85rem]">
+        <div className="rounded-tr-[1rem] rounded-b-[1rem] bg-primary text-white p-4 text-[0.85rem]">
           <a href="#">Contact us now</a>
         </div>
       </div>

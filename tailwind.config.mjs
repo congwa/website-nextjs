@@ -1,31 +1,31 @@
 /** @type {import('tailwindcss').Config} */
 
-const colors = require('tailwindcss/colors')
-module.exports = {
+import  colors from 'tailwindcss/colors';
+const config = {
   content: [  
   './app/**/*.{js,ts,jsx,tsx}',
   './components/**/*.{js,ts,jsx,tsx}'
 ],
   darkMode: 'media', // or 'media' or 'class'
   important: true,
-  // mode: "jit",
+  mode: "jit",
   theme: {
     fontFamily: {
       poppins: "Poppins",
     },
     screens: {
-      ss: "480px",
-      sm: "600px",
+      ss: "540px",
+      sm: "640px",
       md: "768px",
       lg: "976px",
       xl: "1200px"
     },
     extend: {
       colors: {
-        back: "#f1edee",
-        glass: "rgba(255,255,255,0.15)"
-      },
-      colors: {
+        glass: "rgba(255,255,255,0.15)",
+        primary: "#229446",
+        main: "#229446",
+        hover: "#e63d00",
         gray: colors.gray,
         blue: colors.sky,
         red: colors.rose,
@@ -68,4 +68,6 @@ module.exports = {
   },
   plugins: [],
 }
+
+export default config;
 

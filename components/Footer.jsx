@@ -88,7 +88,7 @@ const Footer = async () => {
           </p>
           <div className="flex items-center gap-4">
             <span className="">Follow Us</span>
-            <div className="h-[2px] w-12 bg-black"></div>
+            <div className="h-[2px] w-12 bg-primary"></div>
             {footerSocials.map((footerSocial, index) => {
               return (
                 <div className="" key={index}>

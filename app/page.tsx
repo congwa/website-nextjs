@@ -1,14 +1,13 @@
-import Head from "next/head";
-import React from "react";
-import { Suspense } from "react";
-import Banner from "../components/Banner/Banner";
-import Contact from "../components/Contact"
-import Header from "../components/Header"
-import Home from "../components/Home"
-import About from "../components/About"
-import NavIcon from "../components/NavIcon"
-import Recipe from "../components/Recipe"
-import Footer from "../components/Footer"
+import Head from 'next/head';
+import React from 'react';
+import { Suspense } from 'react';
+import Banner from '../components/Banner/Banner';
+import Contact from '../components/Contact';
+import Header from '../components/Header/Header';
+import Home from '../components/Home';
+import About from '../components/About';
+import Recipe from '../components/Recipe';
+import Footer from '../components/Footer';
 
 const Index = () => {
   return (
@@ -20,21 +19,30 @@ const Index = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="font-poppins bg-back">
+        <Suspense>
           <Header />
-          <Banner></Banner>
-          <NavIcon />
+        </Suspense>
+        <Suspense>
+          <Banner />
+        </Suspense>
+        <Suspense>
           <Home />
+        </Suspense>
+        <Suspense>
           <About />
+        </Suspense>
+        <Suspense>
           <Recipe />
+        </Suspense>
+        <Suspense>
           <Contact />
-          <Suspense>
-            <Footer />
-          </Suspense>
-        </div>
+        </Suspense>
+        <Suspense>
+          <Footer />
+        </Suspense>
+      </div>
     </>
   );
 };
 
 export default Index;
-
-
