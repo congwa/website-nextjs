@@ -25,7 +25,7 @@ const HeaderClient = (props) => {
             Restaurant && BBQ
           </span> */}
           </div>
-          <div className="ss:flex hidden items-center justify-start">
+          <div className="ss:flex hidden items-center justify-start mr-[40px] px-2">
             {
               props?.menu?.map((item, index) => {
                 return <div key={index} className="py-2">

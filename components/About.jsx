@@ -28,7 +28,7 @@ const About = () => {
           </div>
         </div>
         <div className="md:row-start-1">
-          <img object-fit="true" src={pasta} alt="" />
+          <Image object-fit="true" src={pasta} alt="" />
         </div>
       </div>
       <div className="grid md:grid-cols-2 gap-10 items-center">
@@ -45,7 +45,7 @@ const About = () => {
           </p>
         </div>
         <div className="">
-          <img object-fit="true" src={chef} alt="" />
+          <Image object-fit="true" src={chef} alt="" />
         </div>
       </div>
     </div>

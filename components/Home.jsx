@@ -3,6 +3,7 @@ import React from "react";
 import hero from "./assets/hero.png";
 import { FaArrowRight } from "react-icons/fa";
 import { heroIcons } from "./Data";
+import Image from 'next/image'
 
 
 const Home = () => {
@@ -33,7 +34,7 @@ const Home = () => {
         </div>
       </div>
       <div className="min-w-[200px] justify-self-center md:w-[600px]">
-        <img object-fit="true" src={hero} alt="3334" />
+        <Image object-fit="true" src={hero} alt="3334" />
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ const Recipe = () => {
                 className=" p-4 shadow-lg hover:shadow transition-all duration-300 cursor-pointer"
                 key={recipe.id}
               >
-                <img object-fit="true" src={recipe.image} alt="" className="rounded-lg mb-4" />
+                <Image object-fit="true" src={recipe.image} alt="" className="rounded-lg mb-4" />
                 <div className="flex justify-between mb-4">
                   <div className="md:text-xl text-[1rem] font-semibold">
                     {recipe.name}
