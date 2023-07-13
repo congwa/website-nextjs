@@ -15,3 +15,9 @@
 ## next13更多了解
 
 [next13](https://github.com/congwa/Front-end-Basics-Notes/blob/main/study/2-react/next13.md)
+
+
+## future
+
+- 由于是学习性项目，想要了解学习和体验的东西已经了解到不继续维护这个官网的项目。
+- 由于发现 astro + headless cms的方式更加的便捷和友好，固使用这样的方式继续进行此官网项目的开发。
